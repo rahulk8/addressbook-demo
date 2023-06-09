@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy the same to a tocat server') {
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.127.50.222:8081/')], contextPath: 'addressbookdl', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.127.50.222:8081/')], contextPath: 'addressbookSCM', war: '**/*.war'
             }
         }
     }
